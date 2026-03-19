@@ -27,8 +27,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <p class="text-grey">Christopher Barlow</p>
   </div>
   <div class="bar-block">
-    <a href="Index.html" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
-    <a href="Index.html" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
+    <a href="index.html" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
+    <a href="index.html" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
     <a href="#contact" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
   </div>
 <div class="panel large">
@@ -194,7 +194,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <br>
 
   <!-- Back Button -->
-  <a href="Index.html" class="button black">
+  <a href="index.html" class="button black">
     <i class="fa fa-arrow-left"></i> Back to Portfolio
   </a>
 
@@ -202,24 +202,24 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <!-- Slideshow Script -->
 <script>
-let slideIndex = { golf: 1, car: 1, raffle: 1 };
+let slideindex = { golf: 1, car: 1, raffle: 1 };
 
 showSlides(1, 'golf');
 showSlides(1, 'car');
 showSlides(1, 'raffle');
 
 function plusSlides(n, type) {
-  showSlides(slideIndex[type] += n, type);
+  showSlides(slideindex[type] += n, type);
 }
 
 function showSlides(n, type) {
   let slides = document.getElementsByClassName(type + '-slide');
-  if (n > slides.length) { slideIndex[type] = 1; }
-  if (n < 1) { slideIndex[type] = slides.length; }
+  if (n > slides.length) { slideindex[type] = 1; }
+  if (n < 1) { slideindex[type] = slides.length; }
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slides[slideIndex[type]-1].style.display = "block";
+  slides[slideindex[type]-1].style.display = "block";
 }
 </script>
 
