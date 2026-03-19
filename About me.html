@@ -19,17 +19,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="container">
-    <a href="#" onclick="close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+    <a href="#" onclick="closeSidebar()" class="hide-large right jumbo padding hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="assets/Profile Picture.jpg" style="width:45%;" class="round"><br><br>
+    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" style="width:45%;" class="round"><br><br>
     <h4><b>PORTFOLIO</b></h4>
     <p class="text-grey">Christopher Barlow</p>
   </div>
   <div class="bar-block">
-    <a href="Index.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
-    <a href="Index.html" onclick="close()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="close()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
+    <a href="Index.html" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
+    <a href="Index.html" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
+    <a href="#contact" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
   </div>
 <div class="panel large">
   <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">
@@ -39,7 +39,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="overlay hide-large animate-opacity" onclick="closeSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:300px">
@@ -47,7 +47,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <!-- Header -->
 <header id="portfolio">
   <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="circle right margin hide-large hover-opacity"></a>
-  <span class="button hide-large xxlarge hover-text-grey" onclick="open()"><i class="fa fa-bars"></i></span>
+  <span class="button hide-large xxlarge hover-text-grey" onclick="openSidebar()"><i class="fa fa-bars"></i></span>
   <div class="container">
   <h1><b>About me</b></h1>
   </div>
@@ -56,7 +56,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="container padding-large">
 
   <!-- Hero Banner -->
-  <img src="assets/about-banner.jpg" alt="About Me" style="width:100%; max-height:594px; object-fit:cover;" class="margin-bottom">
+ <!--  <img src="assets/about-banner.jpg" alt="About Me" style="width:100%; max-height:594px; object-fit:cover;" class="margin-bottom"> -->
+
 
   <p>
   I am a Project Manager with experience delivering large-scale EPOS deployments 
@@ -92,22 +93,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- DIY Golf Course -->
     <div class="third">
       <div class="slideshow-container" id="golf-slideshow">
-        <img src="assets/Gallary/Golf/Golf1.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf2.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf3.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf4.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf5.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf6.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf7.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf8.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf9.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf10.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf11.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf12.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf13.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf14.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf15.png" class="golf-slide" style="width:100%">
-        <img src="assets/Gallary/Golf/Golf16.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Golf1_mmdrun.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf2_nvuni0.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949615/Golf3_tdztfv.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf4_fuzota.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf5_meqvwa.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf6_vxtpg0.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf7_mp4sjy.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf8_vx8cr3.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/Golf9_q9hq2s.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Golf10_qmrd2o.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf11_x5co7w.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf12_bnurb5.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf13_b16qaf.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949613/Golf14_kjsk3i.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf15_awengc.png" class="golf-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf16_e2tkki.png" class="golf-slide" style="width:100%">
         <!-- Add more golf images as needed -->
         <a class="prev" onclick="plusSlides(-1, 'golf')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'golf')">&#10095;</a>
@@ -129,13 +130,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- Automotive Projects -->
     <div class="third">
       <div class="slideshow-container" id="car-slideshow">
-        <img src="assets/Gallary/Cars/Car1.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car2.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car3.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car4.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car5.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car6.png" class="car-slide" style="width:100%">
-        <img src="assets/Gallary/Cars/Car7.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car1_k4svnl.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car2_jsvmq6.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car3_zsqfp3.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car4_yhwbo8.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Car5_ihufyy.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949610/Car6_qzt8hq.png" class="car-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Car7_wwsbdd.png" class="car-slide" style="width:100%">
         <!-- Add more car images as needed -->
         <a class="prev" onclick="plusSlides(-1, 'car')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'car')">&#10095;</a>
@@ -155,10 +156,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- RaffleHero -->
     <div class="third">
       <div class="slideshow-container" id="raffle-slideshow">
-        <img src="assets/Gallary/RaffleHero/RaffleHero1.png" class="raffle-slide" style="width:100%">
-        <img src="assets/Gallary/RaffleHero/RaffleHero2.png" class="raffle-slide" style="width:100%">
-        <img src="assets/Gallary/RaffleHero/RaffleHero3.png" class="raffle-slide" style="width:100%">
-        <img src="assets/Gallary/RaffleHero/RaffleHero4.png" class="raffle-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/RaffleHero1_sgisyf.png" class="raffle-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero3_e9eqgz.png" class="raffle-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero2_bnoqkh.png" class="raffle-slide" style="width:100%">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/RaffleHero4_hshxpq.png" class="raffle-slide" style="width:100%">
         <!-- Add more raffle screenshots as needed -->
         <a class="prev" onclick="plusSlides(-1, 'raffle')">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 'raffle')">&#10095;</a>
@@ -296,12 +297,12 @@ function showSlides(n, type) {
 
 <script>
 // Script to open and close sidebar
-function open() {
+function openSidebar() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
  
-function close() {
+function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }

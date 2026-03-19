@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Everton FC</title>
+<title>Elior</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="CSS1.css">
@@ -19,17 +19,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <!-- Sidebar/menu -->
 <nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="container">
-    <a href="#" onclick="close()" class="hide-large right jumbo padding hover-grey" title="close menu">
+    <a href="#" onclick="closeSidebar()" class="hide-large right jumbo padding hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="assets/Profile Picture.jpg" style="width:45%;" class="round"><br><br>
+    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" style="width:45%;" class="round"><br><br>
     <h4><b>PORTFOLIO</b></h4>
     <p class="text-grey">Christopher Barlow</p>
   </div>
   <div class="bar-block">
-    <a href="index.html" onclick="close()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
-    <a href="index.html#about" onclick="close()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="close()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
+    <a href="index.html" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
+    <a href="index.html#about" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
+    <a href="#contact" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
   </div>
 <div class="panel large">
   <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">
@@ -39,7 +39,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="overlay hide-large animate-opacity" onclick="closeSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:300px">
@@ -47,7 +47,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="container padding-large">
 
   <!-- Hero Image -->
-  <img src="assets/Elior.png" alt="Elior Catering" style="width:100%; max-height:380px; object-fit:cover;" class="margin-bottom">
+  <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/Elior_br2s6i.png" alt="Elior Catering" style="width:100%; max-height:380px; object-fit:cover;" class="margin-bottom">
 
   <!-- Project Overview -->
   <div class="row-padding margin-bottom">
@@ -230,12 +230,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <script>
 // Script to open and close sidebar
-function open() {
+function openSidebar() {
     document.getElementById("mySidebar").style.display = "block";
     document.getElementById("myOverlay").style.display = "block";
 }
  
-function close() {
+function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
 }
