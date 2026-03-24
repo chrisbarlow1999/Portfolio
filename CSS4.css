@@ -85,11 +85,10 @@ html {
   display: flex;
   align-items: center;
   gap: 4px;
+  padding-left: 10px
 }
 
 .social-icon {
-  width: 30px;
-  height: 30px;
   display: block;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
