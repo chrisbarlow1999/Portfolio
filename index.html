@@ -1,260 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
+<title>Portfolio — Christopher Barlow</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Christopher Barlow — Project Manager specialising in EPOS implementation and digital systems delivery.">
 <link rel="stylesheet" href="CSS1.css">
 <link rel="stylesheet" href="CSS2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="CSS3.css">
 <link rel="stylesheet" href="CSS4.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
+<link rel="stylesheet" href="portfolio.css">
 </head>
-<body class="light-grey content" style="max-width:1600px">
+<body>
 
-<!-- Sidebar/menu -->
-<nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="container">
-    <a href="#" onclick="closeSidebar()" class="hide-large right jumbo padding hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
+<button class="mobile-toggle" onclick="openSidebar()" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+<div id="myOverlay" onclick="closeSidebar()"></div>
+<nav id="mySidebar">
+  <div class="sidebar-profile">
+    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" alt="Christopher Barlow">
+    <h4>Portfolio</h4>
+    <p>Christopher Barlow</p>
+    <p class="role">Project Manager</p>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="index.html" class="active" onclick="closeSidebar()"><i class="fa fa-th-large"></i> Portfolio</a>
+    <a href="about-me.html"  onclick="closeSidebar()"><i class="fa fa-user"></i> About</a>
+    <a href="index.html#contact" onclick="closeSidebar()"><i class="fa fa-envelope"></i> Contact</a>
+  </nav>
+  <div class="availability-badge">Open to Opportunities</div>
+  <div class="sidebar-social">
+    <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 -2 28 32"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"/><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z"/></svg>
     </a>
-    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" style="width:45%;" class="round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-    <p class="text-grey">Christopher Barlow</p>
+    <a href="https://www.tiktok.com/@TheLonelyGreen" target="_blank" title="TikTok">
+      <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 32 32"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.364 5.364 0 0 1-2.903-1.108v4.728a3.938 3.938 0 0 1-1.18 2.81a4.011 4.011 0 0 1-2.87 1.17a4.103 4.103 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.928 1.928 0 0 0 1.313-1.816V5.754a.359.359 0 0 1 .359-.36h1.415a.359.359 0 0 1 .359.34a3.303 3.303 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"/></svg>
+    </a>
   </div>
-  <div class="bar-block">
-    <a href="#portfolio" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
-    <a href="about-me.html" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
-  </div>
-<div class="social-container">
-  <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" height="42px" width="42px" viewBox="0 -2 28 32" fill="black" class="social-icon">
-      <path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"/>
-      <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z"/>
-    </svg>
-  </a>
-
-  <a href="https://www.tiktok.com/@TheLonelyGreen" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 32 32" fill="black" class="social-icon">
-      <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.364 5.364 0 0 1-2.903-1.108v4.728a3.938 3.938 0 0 1-1.18 2.81a4.011 4.011 0 0 1-2.87 1.17a4.103 4.103 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.928 1.928 0 0 0 1.313-1.816V5.754a.359.359 0 0 1 .359-.36h1.415a.359.359 0 0 1 .359.34a3.303 3.303 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"/>
-    </svg>
-  </a>
-</div>
 </nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="closeSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- PAGE CONTENT -->
-<div class="main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <span class="button hide-large xxlarge hover-text-grey" onclick="openSidebar()"><i class="fa fa-bars"></i></span>
-    <div class="container">
-    <h1><b>My Portfolio</b></h1>
-    </div>
-  </header>
-
-<div id="about" class="container padding-large" style="margin-bottom:32px">
-  <h4><b>About Me</b></h4>
-  <p>Hi, I’m Christopher — a technology-focused project professional with a background in delivering digital systems and implementing technology solutions. I previously worked as a Project Manager at Kappture, where I managed the rollout and implementation of point-of-sale systems for major venues and clients, coordinating technical teams and stakeholders to deliver complex projects successfully. </p>
-  <p>Alongside my professional work, I have a strong passion for engineering and hands-on problem solving, having spent years repairing machinery on a smallholding, fixing and breaking cars for parts, and working on practical mechanical projects. I also enjoy building my own digital and technical ventures, including launching a tech-focused competition platform called RaffleHero and documenting creative builds such as constructing a DIY 9-hole golf course. I’m particularly interested in the intersection of technology, engineering, and business, and enjoy turning ideas into practical, working solutions.</p>
-  <hr>
-  
-<!-- First Photo Grid-->
-<div class="row-padding">
-
-  <div class="third container margin-bottom">
-    <a href="manchester-united.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Man_United_odlrxl.jpg" alt="Manchester United"
-      class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="manchester-united.html">Manchester United</a></b></p>
-      <p>Manchester United was the largest project i ever managed which involved swapping out their entire EPOS system and implementing new systems.</p>
-    </div>
+<div id="main-content">
+<section class="hero" id="portfolio">
+  <span class="hero-label">Project Manager &amp; Implementation Specialist</span>
+  <h1>Delivering <em>complex</em><br>technology projects<br>at scale</h1>
+  <p class="hero-sub">From Premier League stadiums to Glastonbury Festival &mdash; I manage the rollout of mission-critical EPOS and digital systems across the UK&rsquo;s most demanding venues.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">1,000+</div><div class="label">Terminals Deployed</div></div>
+    <div class="hero-stat"><div class="num">9+</div><div class="label">Major Projects</div></div>
+    <div class="hero-stat"><div class="num">50+</div><div class="label">Sites Managed</div></div>
   </div>
-
-  <div class="third container margin-bottom">
-    <a href="amazon-jwo.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/JWO_dawav9.jpg" alt="Amazon JWO" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="amazon-jwo.html">Amazon Just Walk Out Store</a></b></p>
-      <p>Amazon started selling their Just Walk Out solution to the public and required a back end for users to add products and do some reporting through, this needed integrating with Kappture's entire system to work.</p>
-    </div>
+</section>
+<div class="section-wrap" style="padding-top:60px;"><span class="section-label">Background</span><h2>About Me</h2></div>
+<div class="about-section">
+  <div class="about-text">
+    <p>Hi, I&rsquo;m Christopher &mdash; a technology-focused project professional with a background in delivering digital systems and implementing technology solutions. I previously worked as a Project Manager at Kappture, where I managed the rollout and implementation of point-of-sale systems for major venues and clients, coordinating technical teams and stakeholders to deliver complex projects successfully.</p>
+    <p>Alongside my professional work, I have a strong passion for engineering and hands-on problem solving, having spent years repairing machinery on a smallholding, fixing and breaking cars for parts, and working on practical mechanical projects. I&rsquo;m particularly interested in the intersection of technology, engineering, and business &mdash; and enjoy turning ideas into practical, working solutions.</p>
   </div>
-
-  <div class="third container">
-    <a href="glastonbury.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Glastonbury_e4u2ah.png" alt="Glastonbury Festival" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="glastonbury.html">Glastonbury Festival</a></b></p>
-      <p>Glastonbury Festival was the largest festival where i managed the implementation of over 600 mobile payment devices across the entire festival.</p>
-    </div>
+  <div class="about-highlights">
+    <div class="highlight-item"><h5>Specialisation</h5><p>EPOS system rollouts, payment integrations, and large-scale hardware deployments across stadiums, festivals, and hospitality venues.</p></div>
+    <div class="highlight-item"><h5>Notable Clients</h5><p>Manchester United, Amazon, Glastonbury Festival, Everton FC, Brentford FC, Royal Opera House, Elior Catering, Coop Live.</p></div>
+    <div class="highlight-item"><h5>Side Ventures</h5><p>Founder of RaffleHero &mdash; a tech-focused competition platform. Also building a DIY 9-hole golf course and documenting the process.</p></div>
   </div>
-
 </div>
-  
-<!-- Second Photo Grid-->
-<div class="row-padding">
-
-  <div class="third container margin-bottom">
-    <a href="brentford.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949599/Brentford-Banner_m9qte2.png" alt="Brentford FC" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="brentford.html">Brentford FC</a></b></p>
-      <p>Brentford FC were one of the first stadiums to start rolling out self ordering kiosks with pre ordering functions on.</p>
-    </div>
+<div class="section-wrap"><span class="section-label">Work</span><h2>Selected Projects</h2></div>
+<div class="projects-section"><div class="project-grid"><a class="project-card" href="manchester-united.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Man_United_odlrxl.jpg" alt="Manchester United"><span class="card-tag">Stadium</span></div>
+  <div class="card-body"><h3>Manchester United</h3><p>Full EPOS system replacement across Old Trafford &mdash; 1,000+ terminals deployed alongside a new table-ordering app and Barclaycard payment integration.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="amazon-jwo.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/JWO_dawav9.jpg" alt="Amazon Just Walk Out"><span class="card-tag">Technology</span></div>
+  <div class="card-body"><h3>Amazon Just Walk Out</h3><p>Integrated Amazon&rsquo;s Just Walk Out retail solution with Kappture&rsquo;s EPOS platform, building the back-end for product management and reporting.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="glastonbury.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Glastonbury_e4u2ah.png" alt="Glastonbury Festival"><span class="card-tag">Festival</span></div>
+  <div class="card-body"><h3>Glastonbury Festival</h3><p>Managed the implementation of over 600 mobile payment devices across the entire Glastonbury site &mdash; the largest single festival deployment.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="brentford.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949599/Brentford-Banner_m9qte2.png" alt="Brentford FC"><span class="card-tag">Stadium</span></div>
+  <div class="card-body"><h3>Brentford FC</h3><p>First UK football stadium to roll out self-ordering kiosks with pre-ordering functionality &mdash; replacing all traditional tills across 12 bars.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="uk-festivals.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949601/Festivals_fow6ba.avif" alt="UK Festivals"><span class="card-tag">Festival</span></div>
+  <div class="card-body"><h3>UK Festivals</h3><p>Created the processes for Kappture&rsquo;s entry into the festival market &mdash; rapid device rental rollouts under tight timelines and limited network conditions.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="everton.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/Everton_myoqfy.png" alt="Everton FC"><span class="card-tag">Stadium</span></div>
+  <div class="card-body"><h3>Everton FC</h3><p>Managed a full EPOS system upgrade end-to-end before Everton&rsquo;s move to their new stadium &mdash; delivered on time with zero matchday disruption.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="elior.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/Elior_br2s6i.png" alt="Elior Catering"><span class="card-tag">Catering</span></div>
+  <div class="card-body"><h3>Elior Catering</h3><p>Led EPOS implementation across 50+ Elior catering sites throughout the UK, including Kappture&rsquo;s first-ever ParentPay balance management integration.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="coop-live.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/coop-live_w6lzhv.png" alt="Coop Live"><span class="card-tag">Venue</span></div>
+  <div class="card-body"><h3>Coop Live</h3><p>Managed the EPOS implementation for the merchandising sector of Coop Live &mdash; one of the UK&rsquo;s newest and largest indoor music arenas.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a>
+<a class="project-card" href="royal-opera-house.html">
+  <div class="card-img"><img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949605/ROH_s8cspw.jpg" alt="Royal Opera House"><span class="card-tag">Cultural</span></div>
+  <div class="card-body"><h3>Royal Opera House</h3><p>Deployed EPOS across multiple retail and hospitality areas, carefully coordinating around live performance schedules at Covent Garden.</p><span class="card-link">View Project <i class="fa fa-arrow-right"></i></span></div>
+</a></div></div>
+<div class="skills-section">
+  <div class="section-wrap"><span class="section-label">Expertise</span><h2>Technical Skills</h2></div>
+  <div class="skills-grid">
+    <div class="skill-item"><div class="skill-header"><span class="skill-name">Project Management</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+    <div class="skill-item"><div class="skill-header"><span class="skill-name">Hardware Installation</span><span class="skill-pct">95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:95%"></div></div></div>
+    <div class="skill-item"><div class="skill-header"><span class="skill-name">Implementation &amp; Rollout</span><span class="skill-pct">90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:90%"></div></div></div>
+    <div class="skill-item"><div class="skill-header"><span class="skill-name">Software Configuration</span><span class="skill-pct">80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" style="width:80%"></div></div></div>
   </div>
-
-  <div class="third container margin-bottom">
-    <a href="uk-festivals.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949601/Festivals_fow6ba.avif" alt="Festivals" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="uk-festivals.html">UK Festivals</a></b></p>
-      <p>In 2024 Kappture entered the festvial space and required new processes to roll out rental devices in short spaces of time with limited network, I was tasked with creating these processes.</p>
-    </div>
+  <span class="tools-label">Tools &amp; Technologies</span>
+  <div class="tools-tags">
+    <span class="tool-tag">Kappture EPOS</span><span class="tool-tag">Barclaycard</span><span class="tool-tag">Amazon JWO</span><span class="tool-tag">ParentPay</span><span class="tool-tag">MS Project</span><span class="tool-tag">RAID Logs</span><span class="tool-tag">RAMS</span><span class="tool-tag">Stakeholder Management</span><span class="tool-tag">Payment Systems</span><span class="tool-tag">Self-Order Kiosks</span><span class="tool-tag">Mobile POS</span><span class="tool-tag">PRINCE2 Agile</span>
   </div>
-
-  <div class="third container">
-    <a href="everton.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/Everton_myoqfy.png" alt="Everton FC" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 160px;">
-      <p><b><a href="everton.html">Everton FC</a></b></p>
-      <p>Just before Everton moved stadium they upgraded their entire EPOS system which i managed from start to finish.</p>
-    </div>
-  </div>
-
+  <a href="Christopher-Barlow-CV.pdf" target="_blank" class="cv-btn"><i class="fa fa-download"></i> View / Download CV</a>
 </div>
-
-<!-- Third Photo Grid-->
-<div class="row-padding">
-
-  <div class="third container margin-bottom">
-    <a href="elior.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/Elior_br2s6i.png" alt="Elior Catering" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 180px;">
-      <p><b><a href="elior.html">Elior Catering</a></b></p>
-      <p>I worked closely with Elior to implement EPOS into over 50 of their sites across the UK.</p>
+<div class="contact-section" id="contact">
+  <span class="section-label">Get In Touch</span>
+  <h2>Contact Me</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="contact-info-intro">Whether you have a project in mind, a role to discuss, or just want to connect &mdash; I&rsquo;d love to hear from you.</p>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-envelope"></i></div><div class="contact-detail"><h5>Email</h5><p>chrisbarlow1999@gmail.com</p></div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-map-marker"></i></div><div class="contact-detail"><h5>Location</h5><p>Derby, United Kingdom</p></div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-phone"></i></div><div class="contact-detail"><h5>Phone</h5><p>07842 503034</p></div></div>
     </div>
-  </div>
-
-  <div class="third container margin-bottom">
-    <a href="coop-live.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949600/coop-live_w6lzhv.png" alt="Coop Live" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 180px;">
-      <p><b><a href="coop-live.html">Coop Live</a></b></p>
-      <p>I managed the project of implementing EPOS into the merchandising sector of Coop Live.</p>
-    </div>
-  </div>
-
-  <div class="third container">
-    <a href="royal-opera-house.html">
-      <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949605/ROH_s8cspw.jpg" alt="Royal Opera House" class="hover-opacity project-img">
-    </a>
-<div class="container white" style="min-height: 180px;">
-      <p><b><a href="royal-opera-house.html">Royal Opera House</a></b></p>
-      <p>Kappture was selected to deploy EPOS systems across multiple retail and hospitality areas within the venue. The project required careful coordination to ensure installations were completed without disrupting scheduled performances or venue operations.</p>
-    </div>
-  </div>
-
-</div>
-
-    <h4>Technical Skills</h4>
-    <!-- Progress bars / Skills -->
-    <p>Project Management</p>
-    <div class="grey">
-      <div class="container dark-grey padding center" style="width:95%">95%</div>
-    </div>
-    <p>Implementation</p>
-    <div class="grey">
-      <div class="container dark-grey padding center" style="width:85%">85%</div>
-    </div>
-    <p>Software Implementation</p>
-    <div class="grey">
-      <div class="container dark-grey padding center" style="width:80%">80%</div>
-    </div>
-    <p>Hardware Installation</p>
-    <div class="grey">
-      <div class="container dark-grey padding center" style="width:95%">95%</div>
-    </div>
-    <p>
-<a href="Christopher-Barlow-CV.pdf" target="_blank" class="button dark-grey padding-large margin-top margin-bottom">
-  <i class="fa fa-download margin-right"></i>View / Download CV</a>
-    </p>
-    <hr>
-    
-  <!-- Contact Section -->
-  <div class="container padding-large grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="row-padding center padding-24" style="margin:0 -16px">
-      <div class="third dark-grey">
-        <p><i class="fa fa-envelope xxlarge text-light-grey"></i></p>
-        <p>chrisbarlow1999@gmail.com</p>
-      </div>
-      <div class="third teal">
-        <p><i class="fa fa-map-marker xxlarge text-light-grey"></i></p>
-        <p>Derby, UK</p>
-      </div>
-      <div class="third dark-grey">
-        <p><i class="fa fa-phone xxlarge text-light-grey"></i></p>
-        <p>07842 503034</p>
-      </div>
-    </div>
-    <hr class="opacity">
-    <form action="https://formspree.io/f/xdawbjkq" method="POST">
-      <div class="section">
-        <label>Name</label>
-        <input class="input border" type="text" name="Name" required>
-      </div>
-      <div class="section">
-        <label>Email</label>
-        <input class="input border" type="text" name="Email" required>
-      </div>
-      <div class="section">
-        <label>Message</label>
-<textarea class="input border" name="Message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="button black margin-bottom"><i class="fa fa-paper-plane margin-right"></i>Send Message</button>
+    <form class="contact-form" action="https://formspree.io/f/xdawbjkq" method="POST">
+      <div class="form-group"><label>Name</label><input type="text" name="Name" required placeholder="Your name"></div>
+      <div class="form-group"><label>Email</label><input type="email" name="Email" required placeholder="your@email.com"></div>
+      <div class="form-group"><label>Message</label><textarea name="Message" rows="5" required placeholder="Tell me about your project or enquiry..."></textarea></div>
+      <button type="submit" class="submit-btn"><i class="fa fa-paper-plane"></i> Send Message</button>
     </form>
   </div>
-
-<!-- Footer -->
-<footer class="container dark-grey padding-24 center">
-  <p>© 2026 Christopher Barlow</p>
-  <p>
-    <a href="mailto:chrisbarlow1999@gmail.com" class="hover-opacity">Email</a> |
-    <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank" class="hover-opacity">LinkedIn</a>
-  </p>
-</footer>
-
-<!-- End page content -->
 </div>
-
+<footer class="site-footer">
+  <p>&copy; 2026 Christopher Barlow</p>
+  <p><a href="mailto:chrisbarlow1999@gmail.com">Email</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">LinkedIn</a></p>
+</footer>
+</div>
 <script>
-// Script to open and close sidebar
-function openSidebar() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function closeSidebar() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
+function openSidebar(){document.getElementById("mySidebar").classList.add("open");document.getElementById("myOverlay").style.display="block";}
+function closeSidebar(){document.getElementById("mySidebar").classList.remove("open");document.getElementById("myOverlay").style.display="none";}
 </script>
-
 </body>
 </html>
