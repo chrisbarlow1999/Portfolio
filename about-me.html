@@ -1,321 +1,159 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About Me</title>
+<title>About Me — Christopher Barlow</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Christopher Barlow — Project Manager specialising in EPOS implementation and digital systems delivery.">
 <link rel="stylesheet" href="CSS1.css">
 <link rel="stylesheet" href="CSS2.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="CSS3.css">
 <link rel="stylesheet" href="CSS4.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
+<link rel="stylesheet" href="portfolio.css">
 </head>
-<body class="light-grey content" style="max-width:1600px">
+<body>
 
-<!-- Sidebar/menu -->
-<nav class="sidebar collapse white animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="container">
-    <a href="#" onclick="closeSidebar()" class="hide-large right jumbo padding hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
+<button class="mobile-toggle" onclick="openSidebar()" aria-label="Open menu"><i class="fa fa-bars"></i></button>
+<div id="myOverlay" onclick="closeSidebar()"></div>
+<nav id="mySidebar">
+  <div class="sidebar-profile">
+    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" alt="Christopher Barlow">
+    <h4>Portfolio</h4>
+    <p>Christopher Barlow</p>
+    <p class="role">Project Manager</p>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="index.html"  onclick="closeSidebar()"><i class="fa fa-th-large"></i> Portfolio</a>
+    <a href="about-me.html" class="active" onclick="closeSidebar()"><i class="fa fa-user"></i> About</a>
+    <a href="index.html#contact" onclick="closeSidebar()"><i class="fa fa-envelope"></i> Contact</a>
+  </nav>
+  <div class="availability-badge">Open to Opportunities</div>
+  <div class="sidebar-social">
+    <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 -2 28 32"><path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"/><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z"/></svg>
     </a>
-    <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" style="width:45%;" class="round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-    <p class="text-grey">Christopher Barlow</p>
+    <a href="https://www.tiktok.com/@TheLonelyGreen" target="_blank" title="TikTok">
+      <svg xmlns="http://www.w3.org/2000/svg" height="22px" width="22px" viewBox="0 0 32 32"><path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.364 5.364 0 0 1-2.903-1.108v4.728a3.938 3.938 0 0 1-1.18 2.81a4.011 4.011 0 0 1-2.87 1.17a4.103 4.103 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.928 1.928 0 0 0 1.313-1.816V5.754a.359.359 0 0 1 .359-.36h1.415a.359.359 0 0 1 .359.34a3.303 3.303 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"/></svg>
+    </a>
   </div>
-  <div class="bar-block">
-    <a href="index.html" onclick="closeSidebar()" class="bar-item button padding text-teal"><i class="fa fa-th-large fa-fw margin-right"></i>PORTFOLIO</a> 
-    <a href="about-me.html" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-user fa-fw margin-right"></i>ABOUT</a>
-    <a href="#contact" onclick="closeSidebar()" class="bar-item button padding"><i class="fa fa-envelope fa-fw margin-right"></i>CONTACT</a>
-  </div>
-<div class="social-container">
-  <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 -2 28 32" fill="black" class="social-icon">
-      <path d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457-.592 0-.945.398-1.1.784-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066 1.41 0 2.468.922 2.468 2.902zM6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115-.014-.632-.465-1.114-1.199-1.114zm-1.086 9.556h2.144V8.38H5.127v6.447z"/>
-      <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z"/>
-    </svg>
-  </a>
-
-  <a href="https://www.tiktok.com/@TheLonelyGreen" target="_blank">
-    <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px" viewBox="0 0 32 32" fill="black" class="social-icon">
-      <path d="M12 2a10 10 0 1 0 10 10A10.01 10.01 0 0 0 12 2m5.939 7.713v.646a.37.37 0 0 1-.38.37a5.364 5.364 0 0 1-2.903-1.108v4.728a3.938 3.938 0 0 1-1.18 2.81a4.011 4.011 0 0 1-2.87 1.17a4.103 4.103 0 0 1-2.862-1.17a3.98 3.98 0 0 1-1.026-3.805c.159-.642.48-1.232.933-1.713a3.58 3.58 0 0 1 2.79-1.313h.82v1.703a.348.348 0 0 1-.39.348a1.918 1.918 0 0 0-1.23 3.631c.27.155.572.246.882.267c.24.01.48-.02.708-.092a1.928 1.928 0 0 0 1.313-1.816V5.754a.359.359 0 0 1 .359-.36h1.415a.359.359 0 0 1 .359.34a3.303 3.303 0 0 0 1.282 2.245a3.25 3.25 0 0 0 1.641.636a.37.37 0 0 1 .338.35z"/>
-    </svg>
-  </a>
-</div>
 </nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large animate-opacity" onclick="closeSidebar()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="main" style="margin-left:300px">
-
-  <!-- Header -->
-<header id="portfolio">
-  <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="circle right margin hide-large hover-opacity"></a>
-  <span class="button hide-large xxlarge hover-text-grey" onclick="openSidebar()"><i class="fa fa-bars"></i></span>
-  <div class="container">
-  <h1><b>About me</b></h1>
+<div id="main-content">
+<div class="project-hero" style="height:280px;">
+  <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949604/Profile_Picture_a5kyhs.jpg" alt="Christopher Barlow" style="object-position:top;">
+  <div class="project-hero-overlay">
+    <span class="project-tag">Project Manager</span>
+    <h1>About Me</h1>
   </div>
-</header>
-
-<div class="container padding-large">
-
-  <!-- Hero Banner -->
- <!--  <img src="assets/about-banner.jpg" alt="About Me" style="width:100%; max-height:594px; object-fit:cover;" class="margin-bottom"> -->
-
-
-  <p>
-  I am a Project Manager with experience delivering large-scale EPOS deployments 
-  across stadiums, festivals and entertainment venues throughout the UK. 
-  During my time at Kappture I led projects ranging from small installations 
-  to full stadium rollouts involving over 1000 payment terminals.
-  </p>
-
-  <p>
-  I enjoy working on projects that involve real operational challenges, 
-  particularly environments where technology must be implemented quickly 
-  and reliably such as live events, sports venues and festivals.
-  </p>
-
-  <p>
-  My experience includes coordinating engineering teams, managing stakeholders, 
-  producing project documentation and ensuring technology deployments are ready 
-  for live operational environments.
-  </p>
-
-  <hr>
-
-  <h3><b>Personal Projects & Interests</b></h3>
-
-  <p>
-  Outside of work I enjoy building and working on my own projects. 
-  These range from technology and business ideas to hands-on practical projects 
-  that involve planning, problem solving and learning new skills.
-  </p>
-
-  <div class="row-padding">
-    
-    <!-- DIY Golf Course -->
-    <div class="third">
-      <div class="slideshow-container" id="golf-slideshow">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Golf1_mmdrun.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf2_nvuni0.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949615/Golf3_tdztfv.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf4_fuzota.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf5_meqvwa.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf6_vxtpg0.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf7_mp4sjy.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf8_vx8cr3.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/Golf9_q9hq2s.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Golf10_qmrd2o.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf11_x5co7w.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf12_bnurb5.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf13_b16qaf.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949613/Golf14_kjsk3i.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf15_awengc.png" class="golf-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf16_e2tkki.png" class="golf-slide" style="width:100%">
-        <!-- Add more golf images as needed -->
-        <a class="prev" onclick="plusSlides(-1, 'golf')">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 'golf')">&#10095;</a>
-      </div>
-      <a href="https://www.tiktok.com/@TheLonelyGreen"><h4><b>DIY Golf Course</b></h4></a>
-      <p>
-        I am currently building a small 9-hole practice golf course on land owned 
-        by my family. The project involves planning the course layout, preparing 
-        the ground, installing drainage, laying turf and building a solar-powered 
-        irrigation system.
-      </p>
-      <p>
-        I also purchased a 25-year-old Greens mower and restored it to maintain 
-        the putting surface. Restoring and maintaining equipment has been an 
-        enjoyable learning experience.
-      </p>
-    </div>
-
-    <!-- Automotive Projects -->
-    <div class="third">
-      <div class="slideshow-container" id="car-slideshow">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car1_k4svnl.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car2_jsvmq6.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car3_zsqfp3.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car4_yhwbo8.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Car5_ihufyy.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949610/Car6_qzt8hq.png" class="car-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Car7_wwsbdd.png" class="car-slide" style="width:100%">
-        <!-- Add more car images as needed -->
-        <a class="prev" onclick="plusSlides(-1, 'car')">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 'car')">&#10095;</a>
-      </div>
-      <h4><b>Automotive Projects</b></h4>
-      <p>
-        I enjoy working on cars in my spare time. My current car was purchased 
-        from Copart as a Category S write-off, which I repaired myself (except 
-        the rear quarter panel). It is still my daily driver with zero issues.
-      </p>
-      <p>
-        Projects like this help me develop practical engineering skills and 
-        problem-solving abilities outside of work.
-      </p>
-    </div>
-
-    <!-- RaffleHero -->
-    <div class="third">
-      <div class="slideshow-container" id="raffle-slideshow">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/RaffleHero1_sgisyf.png" class="raffle-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero3_e9eqgz.png" class="raffle-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero2_bnoqkh.png" class="raffle-slide" style="width:100%">
-        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/RaffleHero4_hshxpq.png" class="raffle-slide" style="width:100%">
-        <!-- Add more raffle screenshots as needed -->
-        <a class="prev" onclick="plusSlides(-1, 'raffle')">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 'raffle')">&#10095;</a>
-      </div>
-      <h4><b>RaffleHero</b></h4>
-      <p>
-        I created RaffleHero, a skill-based competition platform focused on technology prizes. 
-        The platform was built with WordPress and WooCommerce, including payment integrations, 
-        competition mechanics and marketing campaigns.
-      </p>
-    </div>
-
-  </div>
-
-  <hr>
-
-  <h3><b>Outside of Work</b></h3>
-
-  <p>
-  When I'm not working on professional projects I enjoy playing golf, 
-  building personal projects and learning new technical skills. 
-  I particularly enjoy projects that combine planning, technical knowledge 
-  and practical implementation.
-  </p>
-
-  <p>
-  Whether it is delivering large technology deployments or building something 
-  from scratch, I enjoy solving problems and seeing projects successfully 
-  come to life.
-  </p>
-
-  <br>
-
-  <!-- Back Button -->
-  <a href="index.html" class="button black">
-    <i class="fa fa-arrow-left"></i> Back to Portfolio
-  </a>
-
 </div>
+<div class="about-page-content">
+  <p>I am a Project Manager with experience delivering large-scale EPOS deployments across stadiums, festivals, and entertainment venues throughout the UK. During my time at Kappture I led projects ranging from small installations to full stadium rollouts involving over 1,000 payment terminals.</p>
+  <p>I enjoy working on projects that involve real operational challenges &mdash; particularly environments where technology must be implemented quickly and reliably, such as live events, sports venues, and festivals. My experience includes coordinating engineering teams, managing stakeholders, producing project documentation, and ensuring technology deployments are ready for live operational environments.</p>
+  <hr class="about-page-divider">
+  <h2>Personal Projects &amp; Interests</h2>
+  <p style="font-family:'Lora',serif;color:#555;line-height:1.8;margin-bottom:32px;">Outside of work I enjoy building and working on my own projects. These range from technology and business ideas to hands-on practical projects involving planning, problem solving, and learning new skills.</p>
+  <div class="projects-row">
 
-<!-- Slideshow Script -->
-<script>
-let slideindex = { golf: 1, car: 1, raffle: 1 };
-
-showSlides(1, 'golf');
-showSlides(1, 'car');
-showSlides(1, 'raffle');
-
-function plusSlides(n, type) {
-  showSlides(slideindex[type] += n, type);
-}
-
-function showSlides(n, type) {
-  let slides = document.getElementsByClassName(type + '-slide');
-  if (n > slides.length) { slideindex[type] = 1; }
-  if (n < 1) { slideindex[type] = slides.length; }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideindex[type]-1].style.display = "block";
-}
-</script>
-
-  <!-- Pagination (Not Needed)-->
-<!-- 
-  <div class="center padding-32">
-    <div class="bar">
-      <a href="#" class="bar-item button hover-black">&laquo;</a>
-      <a href="#" class="bar-item black button">1</a>
-      <a href="#" class="bar-item button hover-black">2</a>
-      <a href="#" class="bar-item button hover-black">3</a>
-      <a href="#" class="bar-item button hover-black">4</a>
-      <a href="#" class="bar-item button hover-black">&raquo;</a>
+    <div class="personal-project">
+      <div class="slideshow-container" id="golf-slideshow">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Golf1_mmdrun.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf2_nvuni0.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949615/Golf3_tdztfv.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf4_fuzota.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf5_meqvwa.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf6_vxtpg0.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Golf7_mp4sjy.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf8_vx8cr3.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/Golf9_q9hq2s.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Golf10_qmrd2o.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949618/Golf11_x5co7w.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949611/Golf12_bnurb5.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949616/Golf13_b16qaf.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949613/Golf14_kjsk3i.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf15_awengc.png" class="golf-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949614/Golf16_e2tkki.png" class="golf-slide">
+        <a class="prev" onclick="plusSlides(-1,'golf')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1,'golf')">&#10095;</a>
+      </div>
+      <h3><a href="https://www.tiktok.com/@TheLonelyGreen" target="_blank">DIY Golf Course</a></h3>
+      <p>I am currently building a small 9-hole practice golf course on land owned by my family. The project involves planning the course layout, preparing the ground, installing drainage, laying turf, and building a solar-powered irrigation system.</p>
+      <p>I also purchased a 25-year-old Greens mower and restored it to maintain the putting surface.</p>
     </div>
+
+    <div class="personal-project">
+      <div class="slideshow-container" id="car-slideshow">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car1_k4svnl.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car2_jsvmq6.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949606/Car3_zsqfp3.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/Car4_yhwbo8.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949608/Car5_ihufyy.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949610/Car6_qzt8hq.png" class="car-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949609/Car7_wwsbdd.png" class="car-slide">
+        <a class="prev" onclick="plusSlides(-1,'car')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1,'car')">&#10095;</a>
+      </div>
+      <h3>Automotive Projects</h3>
+      <p>I enjoy working on cars in my spare time. My current car was purchased from Copart as a Category S write-off, which I repaired myself. It is still my daily driver with zero issues.</p>
+      <p>Projects like this help me develop practical engineering skills and problem-solving abilities outside of work.</p>
+    </div>
+
+    <div class="personal-project">
+      <div class="slideshow-container" id="raffle-slideshow">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949612/RaffleHero1_sgisyf.png" class="raffle-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero3_e9eqgz.png" class="raffle-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949603/RaffleHero2_bnoqkh.png" class="raffle-slide">
+        <img src="https://res.cloudinary.com/dovwn3c8k/image/upload/v1773949607/RaffleHero4_hshxpq.png" class="raffle-slide">
+        <a class="prev" onclick="plusSlides(-1,'raffle')">&#10094;</a>
+        <a class="next" onclick="plusSlides(1,'raffle')">&#10095;</a>
+      </div>
+      <h3>RaffleHero</h3>
+      <p>I created RaffleHero, a skill-based competition platform focused on technology prizes. Built with WordPress and WooCommerce, including payment integrations, competition mechanics, and marketing campaigns.</p>
+    </div>
+
   </div>
--->
-  <!-- Images of Me (Not needed) -->
-   <!--
-  <div class="row-padding padding-16" id="about">
-    <div class="col m6">
-      <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
+  <hr class="about-page-divider">
+  <h2>Outside of Work</h2>
+  <p class="about-outro">When I&rsquo;m not working on professional projects I enjoy playing golf, building personal projects, and learning new technical skills. I particularly enjoy projects that combine planning, technical knowledge, and practical implementation.</p>
+  <p class="about-outro">Whether it is delivering large technology deployments or building something from scratch, I enjoy solving problems and seeing projects successfully come to life.</p>
+  <a href="index.html" class="back-btn" style="margin-top:16px;"><i class="fa fa-arrow-left"></i> Back to Portfolio</a>
+</div>
+<div class="contact-section" id="contact">
+  <span class="section-label">Get In Touch</span>
+  <h2>Contact Me</h2>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p class="contact-info-intro">Whether you have a project in mind, a role to discuss, or just want to connect &mdash; I&rsquo;d love to hear from you.</p>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-envelope"></i></div><div class="contact-detail"><h5>Email</h5><p>chrisbarlow1999@gmail.com</p></div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-map-marker"></i></div><div class="contact-detail"><h5>Location</h5><p>Derby, United Kingdom</p></div></div>
+      <div class="contact-item"><div class="contact-icon"><i class="fa fa-phone"></i></div><div class="contact-detail"><h5>Phone</h5><p>07842 503034</p></div></div>
     </div>
-    <div class="col m6">
-      <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
-    </div>
-  </div>
--->
-
-  <!-- Contact Section -->
-  <div class="container padding-large grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="row-padding center padding-24" style="margin:0 -16px">
-      <div class="third dark-grey">
-        <p><i class="fa fa-envelope xxlarge text-light-grey"></i></p>
-        <p>chrisbarlow1999@gmail.com</p>
-      </div>
-      <div class="third teal">
-        <p><i class="fa fa-map-marker xxlarge text-light-grey"></i></p>
-        <p>Derby, UK</p>
-      </div>
-      <div class="third dark-grey">
-        <p><i class="fa fa-phone xxlarge text-light-grey"></i></p>
-        <p>07842 503034</p>
-      </div>
-    </div>
-    <hr class="opacity">
-    <form action="https://formspree.io/f/xdawbjkq" method="POST">
-      <div class="section">
-        <label>Name</label>
-        <input class="input border" type="text" name="Name" required>
-      </div>
-      <div class="section">
-        <label>Email</label>
-        <input class="input border" type="text" name="Email" required>
-      </div>
-      <div class="section">
-        <label>Message</label>
-<textarea class="input border" name="Message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="button black margin-bottom"><i class="fa fa-paper-plane margin-right"></i>Send Message</button>
+    <form class="contact-form" action="https://formspree.io/f/xdawbjkq" method="POST">
+      <div class="form-group"><label>Name</label><input type="text" name="Name" required placeholder="Your name"></div>
+      <div class="form-group"><label>Email</label><input type="email" name="Email" required placeholder="your@email.com"></div>
+      <div class="form-group"><label>Message</label><textarea name="Message" rows="5" required placeholder="Tell me about your project or enquiry..."></textarea></div>
+      <button type="submit" class="submit-btn"><i class="fa fa-paper-plane"></i> Send Message</button>
     </form>
   </div>
-
-<!-- Footer -->
-<footer class="container dark-grey padding-24 center">
-  <p>© 2026 Christopher Barlow</p>
-  <p>
-    <a href="mailto:chrisbarlow1999@gmail.com" class="hover-opacity">Email</a> |
-    <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank" class="hover-opacity">LinkedIn</a>
-  </p>
-</footer>
-
-<!-- End page content -->
 </div>
-
+<footer class="site-footer">
+  <p>&copy; 2026 Christopher Barlow</p>
+  <p><a href="mailto:chrisbarlow1999@gmail.com">Email</a> &nbsp;&middot;&nbsp; <a href="https://www.linkedin.com/in/chris-barlow-123311131/" target="_blank">LinkedIn</a></p>
+</footer>
+</div>
 <script>
-// Script to open and close sidebar
-function openSidebar() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function closeSidebar() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
+function openSidebar(){document.getElementById("mySidebar").classList.add("open");document.getElementById("myOverlay").style.display="block";}
+function closeSidebar(){document.getElementById("mySidebar").classList.remove("open");document.getElementById("myOverlay").style.display="none";}
+</script>
+<script>
+let si={golf:1,car:1,raffle:1};
+showS(1,'golf');showS(1,'car');showS(1,'raffle');
+function plusSlides(n,t){showS(si[t]+=n,t);}
+function showS(n,t){
+  let s=document.getElementsByClassName(t+'-slide');
+  if(n>s.length){si[t]=1;}if(n<1){si[t]=s.length;}
+  for(let i=0;i<s.length;i++)s[i].style.display="none";
+  s[si[t]-1].style.display="block";
 }
 </script>
-
 </body>
 </html>
